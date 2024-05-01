@@ -143,9 +143,6 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
             />
           </div>
         </form>
-        <a href="/profile.pdf" rel="noopener noreferrer" target="_blank" className="text-blue-500 hover:text-blue-700">
-          pd tales
-        </a>
       </div>
     </div>
   );
