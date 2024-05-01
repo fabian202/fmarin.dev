@@ -1,0 +1,37 @@
+{
+  "description": "Hi tipe --help to get help",
+  "scripts": [
+    "",
+    "clear"
+  ],
+  "sections": [
+    {
+      "command": "about",
+      "output": ["Experienced Senior Full-Stack Developer with over 18 years of software development experience.<br /> Expertise lies in web frameworks such as ReactJS, GraphQL, and ExpressJS (Node.js), along with proficiency in PostgreSQL for database management.<br /> Passionate about delivering high-quality solutions and continuously exploring emerging technologies to drive innovation and excellence in projects.<br />click <a href='/profile.pdf' rel='noopener noreferrer' target='_blank' class='text-blue-500 hover:text-blue-700'>here</a> to view more"]
+    },
+    {
+      "command": "exp",
+      "output": ["<br />Growth Acceleration Partners<br /> ============================<br /> <ul><li>Senior Software engineer (April 2020 - Present)</li></ul><br /><br />Fenix Cloud S.A.S<br /> =================<br /> <ul><li>Technical Leader (April 2016 to November 2019)</li></ul><br /><br />Cognox S.A.S<br /> ============<br /> <ul><li>Senior Developer (July 2015 to April 2016)</li></ul><br /><br />It-Matica<br /> =========<br /> <ul><li>Senior Developer (August 2011 to July 2014)</li></ul><br />click <a href='/profile.pdf' rel='noopener noreferrer' target='_blank' class='text-blue-500 hover:text-blue-700'>here</a> to view more"]
+    },
+    {
+      "command": "skills",
+      "output": ["<ul class='p-4'><li>- Javascript, Typescript</li><li>- ReactJs, React Native, NextJs</li><li>- NodeJs, ExpressJs, NestJs</li><li>- PostgresSQL, SQLServer, MySQL, M</li><li>- GraphQL</li><li>- Docker</li><li>- Github Actions (CI/CD)</li></ul>"]
+    },
+    {
+      "command": "education",
+      "output": ["<ul class='p-4'><li>- CESDE Software Developer 2009 - 2011</li><li>- ITM Systems of Information 2004 - 2007</li></ul>"]
+    },
+    {
+      "command": "play",
+      "output": ["Let's play something"]
+    },
+    {
+      "command": "help",
+      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- play: Start playing something fun!</li><li>- clear: Clear the console</li></ul>Start typing to begin exploring.</div>"]
+    },
+    {
+      "command": "home",
+      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- play: Start playing something fun!</li><li>- clear: Clear the console</li><li>- help: Show all the available commands</li></ul>Start typing to begin exploring.</div>"]
+    }
+  ]
+}

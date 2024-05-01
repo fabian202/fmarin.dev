@@ -4,9 +4,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main>
-
-      <ConsoleContainer  />
-      <Link href="/dashboard">Dashboard</Link>
+      <ConsoleContainer title="home" />
     </main>
   );
 }
