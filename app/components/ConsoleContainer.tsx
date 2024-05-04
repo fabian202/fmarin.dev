@@ -60,13 +60,13 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
       (s: any) => s.command === inputValue
     );
 
-    // setContent([...content, inputValue]);
+    setContent([...content, inputValue]);
 
     addContent(inputValue);
 
-    if (sectionValue) {
-      router.push(`/${inputValue}`);
-    }
+    // if (sectionValue) {
+    //   router.push(`/${inputValue}`);
+    // }
   };
 
   const addContent = (inputValue: string) => {
