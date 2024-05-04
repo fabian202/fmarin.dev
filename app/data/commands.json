@@ -22,16 +22,12 @@
       "output": ["<ul class='p-4'><li>- CESDE Software Developer 2009 - 2011</li><li>- ITM Systems of Information 2004 - 2007</li></ul>"]
     },
     {
-      "command": "play",
-      "output": ["Let's play something"]
-    },
-    {
       "command": "help",
-      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- play: Start playing something fun!</li><li>- clear: Clear the console</li></ul>Start typing to begin exploring.</div>"]
+      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- clear: Clear the console</li></ul>Start typing to begin exploring.</div>"]
     },
     {
       "command": "home",
-      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- play: Start playing something fun!</li><li>- clear: Clear the console</li><li>- help: Show all the available commands</li></ul>Start typing to begin exploring.</div>"]
+      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- clear: Clear the console</li><li>- help: Show all the available commands</li></ul>Start typing to begin exploring.</div>"]
     }
   ]
 }

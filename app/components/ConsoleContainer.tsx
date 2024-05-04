@@ -15,7 +15,7 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
   const router = useRouter();
   const { content, setContent } = useContentStore((state) => state);
   const [inputValue, setInputValue] = useState("");
-  const [command, setCommand] = useState(title)
+  const [command, setCommand] = useState(title);
   const contentRef = useRef<HTMLElement>(null);
   const inputRef = useRef<HTMLElement>(null);
   const [page, setPage] = useState(0);
@@ -40,10 +40,10 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
 
   useEffect(() => {
     if (data) {
-      console.log('effect', inputValue, title)
-      addContent(title)
+      console.log("effect", inputValue, title);
+      addContent(title);
     }
-  }, [page, title, data])
+  }, [page, title, data]);
 
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
     const newValue = e.currentTarget.value;
@@ -72,12 +72,12 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
   const addContent = (inputValue: string) => {
     //Check if the input value is a valid command
     const scriptValue = data.scripts.find((sc: any) => sc === inputValue);
-    
+
     //Check if the script belongs to a section
     const sectionValue = data.sections.find(
       (s: any) => s.command === inputValue
     );
-    
+
     setTimeout(() => {
       if (sectionValue || scriptValue) {
         if (scriptValue) {
@@ -85,8 +85,10 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
           console.log("execute script");
           switch (scriptValue) {
             case "clear":
-              setContent([])
+              setContent([]);
               break;
+            case "play":
+              router.push(`/invaders`);
             default:
               break;
           }
@@ -102,7 +104,7 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
       }
     }, 500);
 
-    setInputValue('');
+    setInputValue("");
   };
 
   return (
