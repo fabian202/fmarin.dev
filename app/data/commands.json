@@ -2,7 +2,8 @@
   "description": "Hi tipe --help to get help",
   "scripts": [
     "",
-    "clear"
+    "clear",
+    "play"
   ],
   "sections": [
     {

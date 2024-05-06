@@ -1,9 +1,7 @@
 import ConsoleContainer from "./components/ConsoleContainer";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-
-
+import { FaGithub, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import { MdOutlineAlternateEmail } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -30,9 +28,24 @@ export default function Home() {
               >
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/fabian202" target="_blank">
+              <a
+                href="https://github.com/fabian202"
+                target="_blank"
+                className="mr-4"
+              >
                 <FaGithub />
               </a>
+              <a
+                href="mailto:famarin1k86@gmail.com"
+                target="_blank"
+                className="mr-4"
+              >
+                <MdOutlineAlternateEmail />
+              </a>
+              <a href="https://wa.me/573016442107" target="_blank">
+                <FaWhatsapp />
+              </a>
+              {/* FaWhatsapp */}
             </div>
           </div>
         </div>

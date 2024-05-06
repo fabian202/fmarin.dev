@@ -2,10 +2,10 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useContentStore } from "../store/contentStore";
 import Welcome from "./Welcome";
-import Help from "./Help";
+import Modal from "./Modal";
+import RPSGame from "./RPSGame";
 import { useCommands } from "../hooks/useCommands";
 import { useRouter } from "next/navigation";
-import { last } from "lodash";
 
 interface ConsoleContainerProps {
   title: string;
@@ -19,6 +19,7 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
   const contentRef = useRef<HTMLElement>(null);
   const inputRef = useRef<HTMLElement>(null);
   const [page, setPage] = useState(0);
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const { data, isLoading, isError } = useCommands();
 
@@ -88,7 +89,7 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
               setContent([]);
               break;
             case "play":
-              router.push(`/invaders`);
+              openModal();
             default:
               break;
           }
@@ -106,6 +107,14 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
 
     setInputValue("");
   };
+
+  const openModal = () => {
+    setIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsOpen(false)
+  }
 
   return (
     <div className="sm:container mx-auto my-10 bg-gray-900 text-white font-mono text-xs">
@@ -146,6 +155,11 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
           </div>
         </form>
       </div>
+      <Modal isOpen={isOpen} title="RPS" onClose={closeModal}>
+        <div>
+          <RPSGame />
+        </div>
+      </Modal>
     </div>
   );
 };
