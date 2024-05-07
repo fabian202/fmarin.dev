@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useContentStore } from "../store/contentStore";
 import Welcome from "./Welcome";
 import Modal from "./Modal";
@@ -12,10 +12,8 @@ interface ConsoleContainerProps {
 }
 
 const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
-  const router = useRouter();
   const { content, setContent } = useContentStore((state) => state);
   const [inputValue, setInputValue] = useState("");
-  const [command, setCommand] = useState(title);
   const contentRef = useRef<HTMLElement>(null);
   const inputRef = useRef<HTMLElement>(null);
   const [page, setPage] = useState(0);
@@ -48,27 +46,23 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
 
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
     const newValue = e.currentTarget.value;
-    setInputValue(newValue);
+    setInputValue(newValue.toLowerCase());
   };
 
   const handleSubmit = (e: React.FocusEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //Check if the input value is a valid command
-    // const scriptValue = data.scripts.find((sc: any) => sc === inputValue);
-
-    //Check if the script belongs to a section
-    const sectionValue = data.sections.find(
-      (s: any) => s.command === inputValue
-    );
-
     setContent([...content, inputValue]);
 
     addContent(inputValue);
-
-    // if (sectionValue) {
-    //   router.push(`/${inputValue}`);
-    // }
   };
+
+  const handleOnBlur = () => {
+    if (inputValue) {
+      setContent([...content, inputValue]);
+
+      addContent(inputValue);
+    }
+  }
 
   const addContent = (inputValue: string) => {
     //Check if the input value is a valid command
@@ -151,6 +145,8 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
               className="bg-transparent border-none focus:outline-none w-full"
               onChange={handleOnChange}
               ref={inputRef as React.MutableRefObject<HTMLInputElement>}
+              placeholder="Type your command here"
+              onBlur={handleOnBlur}
             />
           </div>
         </form>

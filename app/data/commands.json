@@ -16,7 +16,7 @@
     },
     {
       "command": "skills",
-      "output": ["<ul class='p-4'><li>- Javascript, Typescript</li><li>- ReactJs, React Native, NextJs</li><li>- NodeJs, ExpressJs, NestJs</li><li>- PostgresSQL, SQLServer, MySQL, M</li><li>- GraphQL</li><li>- Docker</li><li>- Github Actions (CI/CD)</li></ul>"]
+      "output": ["<ul class='p-4'><li>- Javascript, Typescript</li><li>- ReactJs, React Native, NextJs</li><li>- NodeJs, ExpressJs, NestJs</li><li>- PostgresSQL, SQLServer, MySQL, M</li><li>- GraphQL</li><li>- Docker</li><li>- Github Actions (CI/CD)</li><li>- Tailwind CSS, Styled Components, Shadcn</li><li>- Storybook, Jest, Playwright</li></ul>"]
     },
     {
       "command": "education",
@@ -24,11 +24,11 @@
     },
     {
       "command": "help",
-      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- clear: Clear the console</li></ul>Start typing to begin exploring.</div>"]
+      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- clear: Clear the console</li><li>- play: Start playing something fun!</li></ul>Start typing to begin exploring.</div>"]
     },
     {
       "command": "home",
-      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- clear: Clear the console</li><li>- help: Show all the available commands</li></ul>Start typing to begin exploring.</div>"]
+      "output": ["<div className='py-3'>Available commands:<ul className='pl-6'><li>- about: Learn more about me and my experience.</li><li>- exp: View my work experience.</li><li>- skills: Discover my skills and expertise.</li><li>- education: Explore my educational background.</li><li>- clear: Clear the console</li><li>- play: Start playing something fun!</li><li>- help: Show all the available commands</li></ul>Start typing to begin exploring.</div>"]
     }
   ]
 }
