@@ -39,7 +39,6 @@ const ConsoleContainer: React.FC<ConsoleContainerProps> = ({ title }) => {
 
   useEffect(() => {
     if (data) {
-      console.log("effect", inputValue, title);
       addContent(title);
     }
   }, [page, title, data]);
