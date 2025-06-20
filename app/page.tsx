@@ -9,7 +9,7 @@ export default function Home() {
       <main>
         <ConsoleContainer title="home" />
         <a
-          href="/profile.pdf"
+          href="/resume.pdf"
           rel="noopener noreferrer"
           target="_blank"
           className="text-blue-500 hover:text-blue-700 hidden"

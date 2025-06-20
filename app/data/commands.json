@@ -8,11 +8,11 @@
   "sections": [
     {
       "command": "about",
-      "output": ["Experienced Senior Full-Stack Developer with over 18 years of software development experience.<br /> Expertise lies in web frameworks such as ReactJS, GraphQL, and ExpressJS (Node.js), along with proficiency in PostgreSQL for database management.<br /> Passionate about delivering high-quality solutions and continuously exploring emerging technologies to drive innovation and excellence in projects.<br />click <a href='/profile.pdf' rel='noopener noreferrer' target='_blank' class='text-blue-500 hover:text-blue-700'>here</a> to view more"]
+      "output": ["Experienced Senior Full-Stack Developer with over 18 years of software development experience.<br /> Expertise lies in web frameworks such as ReactJS, GraphQL, and ExpressJS (Node.js), along with proficiency in PostgreSQL for database management.<br /> Passionate about delivering high-quality solutions and continuously exploring emerging technologies to drive innovation and excellence in projects.<br />click <a href='/resume.pdf' rel='noopener noreferrer' target='_blank' class='text-blue-500 hover:text-blue-700'>here</a> to view more"]
     },
     {
       "command": "exp",
-      "output": ["<br />Growth Acceleration Partners<br /> ============================<br /> <ul><li>Senior Software engineer (April 2020 - Present)</li></ul><br /><br />Fenix Cloud S.A.S<br /> =================<br /> <ul><li>Technical Leader (April 2016 to November 2019)</li></ul><br /><br />Cognox S.A.S<br /> ============<br /> <ul><li>Senior Developer (July 2015 to April 2016)</li></ul><br /><br />It-Matica<br /> =========<br /> <ul><li>Senior Developer (August 2011 to July 2014)</li></ul><br />click <a href='/profile.pdf' rel='noopener noreferrer' target='_blank' class='text-blue-500 hover:text-blue-700'>here</a> to view more"]
+      "output": ["<br />NEORIS - The Home Depot<br /> ============================<br /> <ul><li>Tech Lead (July 2024 - Present)</li></ul><br />Growth Acceleration Partners<br /> ============================<br /> <ul><li>Senior Software engineer (April 2020 - May 2024)</li></ul><br /><br />Fenix Cloud S.A.S<br /> =================<br /> <ul><li>Technical Leader (April 2016 to November 2019)</li></ul><br /><br />Cognox S.A.S<br /> ============<br /> <ul><li>Senior Developer (July 2015 to April 2016)</li></ul><br /><br />It-Matica<br /> =========<br /> <ul><li>Senior Developer (August 2011 to July 2014)</li></ul><br />click <a href='/resume.pdf' rel='noopener noreferrer' target='_blank' class='text-blue-500 hover:text-blue-700'>here</a> to view more"]
     },
     {
       "command": "skills",
