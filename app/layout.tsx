@@ -8,9 +8,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Fabián Marín',
-  description: 'Senior Software Engineer',
+  description: 'Experienced Senior Full-Stack Developer with over 18 years of software development experience. Expertise in ReactJS, GraphQL, ExpressJS (Node.js), and PostgreSQL.',
   openGraph: {
-    images: 'og-image.jpeg',
+    title: 'Fabián Marín – Senior Software Engineer',
+    description: 'Experienced Senior Full-Stack Developer with over 18 years of software development experience. Expertise in ReactJS, GraphQL, ExpressJS (Node.js), and PostgreSQL.',
+    images: '/og-image.jpeg',
+    type: 'website',
+    url: 'https://fmarin.dev',
   },
 }
 
