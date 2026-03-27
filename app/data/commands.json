@@ -8,7 +8,7 @@
   "sections": [
     {
       "command": "about",
-      "output": ["Experienced Senior Full-Stack Developer with over 18 years of software development experience.<br /> Expertise lies in web frameworks such as ReactJS, GraphQL, and ExpressJS (Node.js), along with proficiency in PostgreSQL for database management.<br /> Passionate about delivering high-quality solutions and continuously exploring emerging technologies to drive innovation and excellence in projects.<br />click <a href='/resume.pdf' rel='noopener noreferrer' target='_blank' class='text-blue-500 hover:text-blue-700'>here</a> to view more"]
+      "output": ["Experienced Senior Full-Stack Developer with over 18 years of software development experience.<br /> Expertise lies in web frameworks such as ReactJS, React Native, GraphQL, and ExpressJS (Node.js), along with proficiency in PostgreSQL for database management.<br /> Passionate about delivering high-quality solutions and continuously exploring emerging technologies to drive innovation and excellence in projects.<br />click <a href='/resume.pdf' rel='noopener noreferrer' target='_blank' class='text-blue-500 hover:text-blue-700'>here</a> to view more"]
     },
     {
       "command": "exp",
