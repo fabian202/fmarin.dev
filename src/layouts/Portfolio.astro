@@ -1,8 +1,15 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import enTranslations from '../i18n/en.json';
 import esTranslations from '../i18n/es.json';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Skills from '../components/Skills.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Languages from '../components/Languages.astro';
+import Footer from '../components/Footer.astro';
 
 const { lang = 'en' } = Astro.props as { lang: 'en' | 'es' };
 
@@ -56,168 +63,25 @@ const t = ui[lang];
   
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="/src/styles/portfolio.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-logo">FM.dev</div>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#skills">{t.skills}</a></li>
-        <li><a href="#experience">{t.experience}</a></li>
-        <li><a href="#education">{t.education}</a></li>
-        <li><a href="#contact">{t.cta}</a></li>
-      </ul>
-      <a href={otherUrl} class="lang-switch">{otherLang.toUpperCase()}</a>
-    </div>
-  </nav>
+  <Nav translations={t} otherLang={otherLang} otherUrl={otherUrl} />
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <div class="hero-tag">{t.available}</div>
-      <h1>Fabián<br/><span>Marín</span></h1>
-      <p class="hero-bio">{t.bio}</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn-primary">{t.cta}</a>
-        <a href="#experience" class="btn-ghost">{t.viewWork}</a>
-        <a href="/resume.pdf" target="_blank" class="btn-ghost">{t.resume}</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-location">Medellín, Colombia</div>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num">18+</div>
-          <div class="stat-label">{t.yearsExp}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">{t.companies}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">2</div>
-          <div class="stat-label">{t.languages}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">∞</div>
-          <div class="stat-label">{t.coffee}</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Hero translations={t} />
 
-  <!-- SKILLS -->
-  <section class="skills-section" id="skills">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <h2>{t.skills}</h2>
-    </div>
-    <div class="skills-grid">
-      {skillsOrdered.map((skill) => (
-        <div class="skill-card">
-          <div class="skill-icon">{skill.data.category}</div>
-          <div class="skill-title">{skill.data.title}</div>
-          <div class="skill-tags">
-            {skill.data.tags.map((tag) => (
-              <span class="tag">{tag}</span>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
+  <Skills skills={skillsOrdered} translations={t} />
 
-  <!-- EXPERIENCE -->
-  <section class="experience-section" id="experience">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2>{t.experience}</h2>
-    </div>
-    <div class="exp-list">
-      {await Promise.all(expOrdered.map(async (exp) => {
-        const { Content } = await render(exp);
-        return (
-          <div class="exp-item">
-            <div class="exp-meta">
-              <div class="exp-company">{exp.data.company}</div>
-              <div class="exp-period">{exp.data.startDate} → {exp.data.endDate ?? t.present}</div>
-            </div>
-            <div class="exp-content">
-              <div class="exp-role">{exp.data.position}</div>
-              <div class="exp-desc"><Content /></div>
-            </div>
-          </div>
-        );
-      }))}
-    </div>
-  </section>
+  <Experience experience={expOrdered} translations={t} />
 
   <!-- EDUCATION & LANGUAGES -->
   <div class="bottom-section" id="education">
-    <div class="edu-section">
-      <div class="section-header">
-        <span class="section-num">03</span>
-        <h2>{t.education}</h2>
-      </div>
-      {educationOrdered.map((edu) => (
-        <div class="edu-item">
-          <div class="edu-school">{edu.data.school}</div>
-          <div class="edu-degree">{edu.data.degree}</div>
-          <div class="edu-period">{edu.data.startDate} – {edu.data.endDate}</div>
-        </div>
-      ))}
-    </div>
-
-    <div class="lang-section">
-      <div class="section-header">
-        <span class="section-num">04</span>
-        <h2>{t.langs}</h2>
-      </div>
-      <div class="lang-item">
-        <div class="lang-name">{t.spanish}</div>
-        <div class="lang-level">{t.native}</div>
-      </div>
-      <div class="lang-item">
-        <div class="lang-name">{t.english}</div>
-        <div class="lang-level">{t.advanced}</div>
-      </div>
-    </div>
+    <Education education={educationOrdered} translations={t} />
+    <Languages translations={t} />
   </div>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <div>
-      <div class="footer-heading">{t.together}</div>
-      <div class="contact-links">
-        <a href="mailto:famarin1k86@gmail.com" class="contact-link">
-          <span class="contact-link-label">Email</span>
-          famarin1k86@gmail.com
-        </a>
-        <a href="https://wa.me/573016442107" target="_blank" class="contact-link">
-          <span class="contact-link-label">WhatsApp</span>
-          +57 301 644 2107
-        </a>
-        <a href="https://www.linkedin.com/in/fabian-marin-36bab01a1/" target="_blank" class="contact-link">
-          <span class="contact-link-label">LinkedIn</span>
-          fabian-marin
-        </a>
-        <a href="https://github.com/fabian202" target="_blank" class="contact-link">
-          <span class="contact-link-label">GitHub</span>
-          fabian202
-        </a>
-        <a href="https://famarin.dev" target="_blank" class="contact-link">
-          <span class="contact-link-label">Web</span>
-          famarin.dev
-        </a>
-      </div>
-    </div>
-    <div class="footer-copy">
-      © {currentYear} Fabián Marín<br/>
-      Medellín, Colombia
-    </div>
-  </footer>
+  <Footer translations={t} currentYear={currentYear} />
 
 </body>
 </html>

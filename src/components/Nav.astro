@@ -1,0 +1,27 @@
+---
+interface Props {
+  translations: {
+    skills: string;
+    experience: string;
+    education: string;
+    cta: string;
+  };
+  otherLang: string;
+  otherUrl: string;
+}
+
+const { translations, otherLang, otherUrl } = Astro.props;
+---
+
+<nav>
+  <div class="nav-logo">FM.dev</div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#skills">{translations.skills}</a></li>
+      <li><a href="#experience">{translations.experience}</a></li>
+      <li><a href="#education">{translations.education}</a></li>
+      <li><a href="#contact">{translations.cta}</a></li>
+    </ul>
+    <a href={otherUrl} class="lang-switch">{otherLang.toUpperCase()}</a>
+  </div>
+</nav>

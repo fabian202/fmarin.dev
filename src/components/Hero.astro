@@ -1,0 +1,51 @@
+---
+interface Props {
+  translations: {
+    available: string;
+    bio: string;
+    cta: string;
+    viewWork: string;
+    resume: string;
+    yearsExp: string;
+    companies: string;
+    languages: string;
+    coffee: string;
+  };
+}
+
+const { translations } = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">{translations.available}</div>
+    <h1>Fabián<br/><span>Marín</span></h1>
+    <p class="hero-bio">{translations.bio}</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">{translations.cta}</a>
+      <a href="#experience" class="btn-ghost">{translations.viewWork}</a>
+      <a href="/resume.pdf" target="_blank" class="btn-ghost">{translations.resume}</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-location">Medellín, Colombia</div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">18+</div>
+        <div class="stat-label">{translations.yearsExp}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">{translations.companies}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2</div>
+        <div class="stat-label">{translations.languages}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">{translations.coffee}</div>
+      </div>
+    </div>
+  </div>
+</section>

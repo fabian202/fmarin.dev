@@ -1,0 +1,42 @@
+---
+interface Props {
+  translations: {
+    together: string;
+  };
+  currentYear: number;
+}
+
+const { translations, currentYear } = Astro.props;
+---
+
+<footer id="contact">
+  <div>
+    <div class="footer-heading">{translations.together}</div>
+    <div class="contact-links">
+      <a href="mailto:famarin1k86@gmail.com" class="contact-link">
+        <span class="contact-link-label">Email</span>
+        famarin1k86@gmail.com
+      </a>
+      <a href="https://wa.me/573016442107" target="_blank" class="contact-link">
+        <span class="contact-link-label">WhatsApp</span>
+        +57 301 644 2107
+      </a>
+      <a href="https://www.linkedin.com/in/fabian-marin-36bab01a1/" target="_blank" class="contact-link">
+        <span class="contact-link-label">LinkedIn</span>
+        fabian-marin
+      </a>
+      <a href="https://github.com/fabian202" target="_blank" class="contact-link">
+        <span class="contact-link-label">GitHub</span>
+        fabian202
+      </a>
+      <a href="https://famarin.dev" target="_blank" class="contact-link">
+        <span class="contact-link-label">Web</span>
+        famarin.dev
+      </a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    © {currentYear} Fabián Marín<br/>
+    Medellín, Colombia
+  </div>
+</footer>

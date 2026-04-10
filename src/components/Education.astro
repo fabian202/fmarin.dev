@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  education: CollectionEntry<'education'>[];
+  translations: {
+    education: string;
+  };
+}
+
+const { education, translations } = Astro.props;
+---
+
+<div class="edu-section">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2>{translations.education}</h2>
+  </div>
+  {education.map((edu) => (
+    <div class="edu-item">
+      <div class="edu-school">{edu.data.school}</div>
+      <div class="edu-degree">{edu.data.degree}</div>
+      <div class="edu-period">{edu.data.startDate} – {edu.data.endDate}</div>
+    </div>
+  ))}
+</div>

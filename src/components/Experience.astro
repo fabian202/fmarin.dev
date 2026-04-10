@@ -1,0 +1,38 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  experience: CollectionEntry<'experience'>[];
+  translations: {
+    experience: string;
+    present: string;
+  };
+}
+
+const { experience, translations } = Astro.props;
+---
+
+<section class="experience-section" id="experience">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2>{translations.experience}</h2>
+  </div>
+  <div class="exp-list">
+    {await Promise.all(experience.map(async (exp) => {
+      const { Content } = await render(exp);
+      return (
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-company">{exp.data.company}</div>
+            <div class="exp-period">{exp.data.startDate} → {exp.data.endDate ?? translations.present}</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-role">{exp.data.position}</div>
+            <div class="exp-desc"><Content /></div>
+          </div>
+        </div>
+      );
+    }))}
+  </div>
+</section>
