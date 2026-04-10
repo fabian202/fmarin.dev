@@ -4,7 +4,6 @@ interface Props {
     available: string;
     bio: string;
     cta: string;
-    viewWork: string;
     resume: string;
     yearsExp: string;
     techStack: string;
@@ -23,7 +22,6 @@ const { translations } = Astro.props;
     <p class="hero-bio">{translations.bio}</p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">{translations.cta}</a>
-      <a href="#experience" class="btn-ghost">{translations.viewWork}</a>
       <a href="/resume.pdf" target="_blank" class="btn-ghost">{translations.resume}</a>
     </div>
   </div>

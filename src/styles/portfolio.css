@@ -173,6 +173,7 @@ h1 span { color: var(--accent); font-style: italic; }
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .btn-primary:hover { background: var(--text); transform: translateY(-2px); }
@@ -187,6 +188,7 @@ h1 span { color: var(--accent); font-style: italic; }
   border-bottom: 1px solid var(--muted2);
   padding-bottom: 2px;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .btn-ghost:hover { color: var(--text); border-color: var(--text); }
