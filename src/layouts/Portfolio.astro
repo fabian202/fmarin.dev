@@ -69,6 +69,15 @@ const t = ui[lang];
   
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LFTER7DSJ"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0LFTER7DSJ');
+  </script>
 </head>
 <body>
 
@@ -89,6 +98,52 @@ const t = ui[lang];
   </div>
 
   <Footer translations={t} currentYear={currentYear} />
+
+  <!-- Scroll Tracking -->
+  <script is:inline>
+    let scrollTracked = {
+      '25': false,
+      '50': false,
+      '75': false,
+      '100': false
+    };
+
+    window.addEventListener('scroll', function() {
+      const winHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+
+      ['25', '50', '75', '100'].forEach(function(milestone) {
+        if (scrollPercent >= parseInt(milestone) && !scrollTracked[milestone]) {
+          scrollTracked[milestone] = true;
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'scroll_depth', {
+              'event_category': 'engagement',
+              'event_label': milestone + '%',
+              'value': parseInt(milestone)
+            });
+          }
+        }
+      });
+    });
+
+    // Track resume downloads
+    document.addEventListener('DOMContentLoaded', function() {
+      const resumeLinks = document.querySelectorAll('a[href="/resume.pdf"]');
+      resumeLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'resume_download', {
+              'event_category': 'engagement',
+              'event_label': 'Resume PDF',
+              'transport_type': 'beacon'
+            });
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
