@@ -3,6 +3,7 @@ interface Props {
   translations: {
     skills: string;
     experience: string;
+    highlights: string;
     education: string;
     cta: string;
   };
@@ -19,6 +20,7 @@ const { translations, otherLang, otherUrl } = Astro.props;
     <ul class="nav-links">
       <li><a href="#skills">{translations.skills}</a></li>
       <li><a href="#experience">{translations.experience}</a></li>
+      <li><a href="#highlights">{translations.highlights}</a></li>
       <li><a href="#education">{translations.education}</a></li>
       <li><a href="#contact">{translations.cta}</a></li>
     </ul>
