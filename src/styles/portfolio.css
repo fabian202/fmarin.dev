@@ -9,6 +9,19 @@
   --muted2: #444444;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f5f0;
+    --surface: #ffffff;
+    --surface2: #fafaf8;
+    --border: #e0e0dc;
+    --accent: #a8d01f;
+    --text: #1a1a1a;
+    --muted: #666666;
+    --muted2: #999999;
+  }
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
