@@ -34,8 +34,18 @@ const education = defineCollection({
   }),
 });
 
+const highlights = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/highlights" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    order: z.number(),
+  }),
+});
+
 export const collections = {
   experience,
   skills,
   education,
+  highlights,
 };

@@ -5,6 +5,7 @@ import enTranslations from '../i18n/en.json';
 import esTranslations from '../i18n/es.json';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import Highlights from '../components/Highlights.astro';
 import Skills from '../components/Skills.astro';
 import Experience from '../components/Experience.astro';
 import Education from '../components/Education.astro';
@@ -22,10 +23,14 @@ const skills = await getCollection('skills', ({ id }: { id: string }) =>
 const education = await getCollection('education', ({ id }: { id: string }) =>
   id.startsWith(`${lang}/`)
 );
+const highlights = await getCollection('highlights', ({ id }: { id: string }) =>
+  id.startsWith(`${lang}/`)
+);
 
 const expOrdered = experience.sort((a: CollectionEntry<'experience'>, b: CollectionEntry<'experience'>) => a.data.order - b.data.order);
 const skillsOrdered = skills.sort((a: CollectionEntry<'skills'>, b: CollectionEntry<'skills'>) => a.data.order - b.data.order);
 const educationOrdered = education.sort((a: CollectionEntry<'education'>, b: CollectionEntry<'education'>) => a.data.order - b.data.order);
+const highlightsOrdered = highlights.sort((a: CollectionEntry<'highlights'>, b: CollectionEntry<'highlights'>) => a.data.order - b.data.order);
 
 const otherLang = lang === 'en' ? 'es' : 'en';
 const otherUrl  = lang === 'en' ? '/es' : '/';
@@ -45,20 +50,20 @@ const t = ui[lang];
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fabián Marín — Senior Software Engineer</title>
-  <meta name="description" content="Senior Full-Stack Developer with over 18 years of experience building scalable web applications." />
+  <meta name="description" content="Senior Full-Stack Developer with over 19 years of experience building scalable web applications." />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://famarin.dev/" />
   <meta property="og:title" content="Fabián Marín — Senior Software Engineer" />
-  <meta property="og:description" content="Senior Full-Stack Developer with over 18 years of experience building scalable web applications." />
+  <meta property="og:description" content="Senior Full-Stack Developer with over 19 years of experience building scalable web applications." />
   <meta property="og:image" content="https://famarin.dev/og-image.png" />
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://famarin.dev/" />
   <meta property="twitter:title" content="Fabián Marín — Senior Software Engineer" />
-  <meta property="twitter:description" content="Senior Full-Stack Developer with over 18 years of experience building scalable web applications." />
+  <meta property="twitter:description" content="Senior Full-Stack Developer with over 19 years of experience building scalable web applications." />
   <meta property="twitter:image" content="https://famarin.dev/og-image.png" />
   
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -74,6 +79,8 @@ const t = ui[lang];
   <Skills skills={skillsOrdered} translations={t} />
 
   <Experience experience={expOrdered} translations={t} />
+
+  <Highlights highlights={highlightsOrdered} translations={t} />
 
   <!-- EDUCATION & LANGUAGES -->
   <div class="bottom-section" id="education">
