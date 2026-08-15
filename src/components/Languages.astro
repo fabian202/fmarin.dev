@@ -14,15 +14,31 @@ const { translations } = Astro.props;
 
 <div class="lang-section">
   <div class="section-header">
-    <span class="section-num">05</span>
+    <span class="section-num">STAGE 05</span>
     <h2>{translations.langs}</h2>
   </div>
   <div class="lang-item">
-    <div class="lang-name">{translations.spanish}</div>
-    <div class="lang-level">{translations.native}</div>
+    <div class="lang-info">
+      <div class="lang-name">{translations.spanish}</div>
+      <div class="lang-level">{translations.native}</div>
+    </div>
+    <div class="xp-bar" aria-hidden="true">
+      <span class="xp-block filled"></span>
+      <span class="xp-block filled"></span>
+      <span class="xp-block filled"></span>
+      <span class="xp-block filled"></span>
+    </div>
   </div>
   <div class="lang-item">
-    <div class="lang-name">{translations.english}</div>
-    <div class="lang-level">{translations.advanced}</div>
+    <div class="lang-info">
+      <div class="lang-name">{translations.english}</div>
+      <div class="lang-level">{translations.advanced}</div>
+    </div>
+    <div class="xp-bar" aria-hidden="true">
+      <span class="xp-block filled"></span>
+      <span class="xp-block filled"></span>
+      <span class="xp-block filled"></span>
+      <span class="xp-block"></span>
+    </div>
   </div>
 </div>

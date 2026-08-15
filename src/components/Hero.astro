@@ -2,47 +2,60 @@
 interface Props {
   translations: {
     available: string;
+    brand: string;
+    headline: string;
     bio: string;
     cta: string;
     resume: string;
-    yearsExp: string;
-    techStack: string;
-    commitment: string;
-    coffee: string;
+    terminalPlayer: string;
+    terminalClass: string;
+    terminalLoc: string;
+    terminalStatus: string;
+    terminalXp: string;
+    terminalBoot1: string;
+    terminalBoot2: string;
+    terminalBoot3: string;
   };
 }
 
 const { translations } = Astro.props;
 ---
 
-<section class="hero">
+<section class="hero" id="top">
   <div class="hero-left">
-    <div class="hero-tag">{translations.available}</div>
-    <h1>Fabián<br/><span>Marín</span></h1>
+    <div class="hero-tag">
+      <span class="status-dot" aria-hidden="true"></span>
+      {translations.available}
+    </div>
+    <p class="hero-brand">{translations.brand}</p>
+    <h1>{translations.headline}</h1>
     <p class="hero-bio">{translations.bio}</p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">{translations.cta}</a>
       <a href="/resume.pdf" target="_blank" class="btn-ghost">{translations.resume}</a>
     </div>
   </div>
+
   <div class="hero-right">
-    <div class="hero-location">Medellín, Colombia</div>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">19+</div>
-        <div class="stat-label">{translations.yearsExp}</div>
+    <div class="terminal" aria-label="Player status terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-title">player.sav</span>
       </div>
-      <div class="stat">
-        <div class="stat-num">10+</div>
-        <div class="stat-label">{translations.techStack}</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">{translations.commitment}</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">∞</div>
-        <div class="stat-label">{translations.coffee}</div>
+      <div class="terminal-body">
+        <p class="boot-line" data-boot="1">{translations.terminalBoot1}</p>
+        <p class="boot-line" data-boot="2">{translations.terminalBoot2}</p>
+        <p class="boot-line" data-boot="3">{translations.terminalBoot3}</p>
+        <div class="terminal-sheet">
+          <div class="sheet-row"><span class="sheet-key">PLAYER</span><span class="sheet-val">{translations.terminalPlayer}</span></div>
+          <div class="sheet-row"><span class="sheet-key">CLASS</span><span class="sheet-val">{translations.terminalClass}</span></div>
+          <div class="sheet-row"><span class="sheet-key">LOC</span><span class="sheet-val">{translations.terminalLoc}</span></div>
+          <div class="sheet-row"><span class="sheet-key">STATUS</span><span class="sheet-val sheet-ok">{translations.terminalStatus}</span></div>
+          <div class="sheet-row"><span class="sheet-key">XP</span><span class="sheet-val">{translations.terminalXp}</span></div>
+        </div>
+        <p class="terminal-prompt">><span class="cursor" aria-hidden="true"></span></p>
       </div>
     </div>
   </div>

@@ -36,6 +36,7 @@ const highlightsOrdered = highlights.sort((a: CollectionEntry<'highlights'>, b: 
 const otherLang = lang === 'en' ? 'es' : 'en';
 const otherUrl  = lang === 'en' ? '/es' : '/';
 const currentYear = new Date().getFullYear();
+const siteUrl = lang === 'en' ? 'https://famarin.dev/' : 'https://famarin.dev/es';
 
 const ui = {
   en: enTranslations,
@@ -50,27 +51,28 @@ const t = ui[lang];
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fabián Marín — Senior Software Engineer</title>
-  <meta name="description" content="Senior Full-Stack Developer with over 19 years of experience building scalable web applications." />
-  
-  <!-- Open Graph / Facebook -->
+  <title>{t.metaTitle}</title>
+  <meta name="description" content={t.metaDescription} />
+  <meta name="theme-color" content="#0c0a08" />
+
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://famarin.dev/" />
-  <meta property="og:title" content="Fabián Marín — Senior Software Engineer" />
-  <meta property="og:description" content="Senior Full-Stack Developer with over 19 years of experience building scalable web applications." />
+  <meta property="og:url" content={siteUrl} />
+  <meta property="og:title" content={t.metaTitle} />
+  <meta property="og:description" content={t.metaDescription} />
   <meta property="og:image" content="https://famarin.dev/og-image.png" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://famarin.dev/" />
-  <meta property="twitter:title" content="Fabián Marín — Senior Software Engineer" />
-  <meta property="twitter:description" content="Senior Full-Stack Developer with over 19 years of experience building scalable web applications." />
-  <meta property="twitter:image" content="https://famarin.dev/og-image.png" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'es_CO'} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={siteUrl} />
+  <meta name="twitter:title" content={t.metaTitle} />
+  <meta name="twitter:description" content={t.metaDescription} />
+  <meta name="twitter:image" content="https://famarin.dev/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet"/>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  
-  <!-- Google Analytics -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LFTER7DSJ"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
@@ -91,7 +93,6 @@ const t = ui[lang];
 
   <Highlights highlights={highlightsOrdered} translations={t} />
 
-  <!-- EDUCATION & LANGUAGES -->
   <div class="bottom-section" id="education">
     <Education education={educationOrdered} translations={t} />
     <Languages translations={t} />
@@ -99,7 +100,6 @@ const t = ui[lang];
 
   <Footer translations={t} currentYear={currentYear} />
 
-  <!-- Scroll Tracking -->
   <script is:inline>
     let scrollTracked = {
       '25': false,
@@ -128,7 +128,6 @@ const t = ui[lang];
       });
     });
 
-    // Track resume downloads
     document.addEventListener('DOMContentLoaded', function() {
       const resumeLinks = document.querySelectorAll('a[href="/resume.pdf"]');
       resumeLinks.forEach(function(link) {
