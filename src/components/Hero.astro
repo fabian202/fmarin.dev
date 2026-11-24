@@ -16,9 +16,10 @@ interface Props {
     terminalBoot2: string;
     terminalBoot3: string;
   };
+  resumeHref: string;
 }
 
-const { translations } = Astro.props;
+const { translations, resumeHref } = Astro.props;
 ---
 
 <section class="hero" id="top">
@@ -32,7 +33,7 @@ const { translations } = Astro.props;
     <p class="hero-bio">{translations.bio}</p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">{translations.cta}</a>
-      <a href="/resume.pdf" target="_blank" class="btn-ghost">{translations.resume}</a>
+      <a href={resumeHref} target="_blank" rel="noopener noreferrer" class="btn-ghost" data-resume-download>{translations.resume}</a>
     </div>
   </div>
 

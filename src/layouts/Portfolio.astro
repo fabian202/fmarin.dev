@@ -44,6 +44,7 @@ const ui = {
 };
 
 const t = ui[lang];
+const resumeHref = lang === 'es' ? '/resume.es.pdf' : '/resume.pdf';
 ---
 
 <!DOCTYPE html>
@@ -85,7 +86,7 @@ const t = ui[lang];
 
   <Nav translations={t} otherLang={otherLang} otherUrl={otherUrl} />
 
-  <Hero translations={t} />
+  <Hero translations={t} resumeHref={resumeHref} />
 
   <Skills skills={skillsOrdered} translations={t} />
 
@@ -129,13 +130,13 @@ const t = ui[lang];
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-      const resumeLinks = document.querySelectorAll('a[href="/resume.pdf"]');
+      const resumeLinks = document.querySelectorAll('[data-resume-download]');
       resumeLinks.forEach(function(link) {
         link.addEventListener('click', function() {
           if (typeof gtag !== 'undefined') {
             gtag('event', 'resume_download', {
               'event_category': 'engagement',
-              'event_label': 'Resume PDF',
+              'event_label': link.getAttribute('href') || 'Resume PDF',
               'transport_type': 'beacon'
             });
           }
