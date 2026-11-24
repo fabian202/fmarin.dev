@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fabián Marín — Resume</title>
+  <style>
+    @page { size: Letter; margin: 0.55in; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.35;
+      color: #1a1a1a;
+    }
+    h1 {
+      margin: 0 0 2px;
+      font-size: 22pt;
+      letter-spacing: -0.02em;
+    }
+    .title {
+      margin: 0 0 10px;
+      font-size: 11pt;
+      color: #444;
+      font-weight: 600;
+    }
+    .contact {
+      font-size: 9pt;
+      color: #333;
+      margin-bottom: 14px;
+    }
+    .contact a { color: #333; text-decoration: none; }
+    h2 {
+      margin: 14px 0 6px;
+      font-size: 11pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1.5px solid #222;
+      padding-bottom: 3px;
+    }
+    .skills {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .skills li { margin-bottom: 3px; }
+    .skills strong { display: inline-block; min-width: 88px; }
+    .profile { margin: 0; }
+    .job { margin-bottom: 10px; page-break-inside: avoid; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .job-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: #444;
+      font-size: 9.5pt;
+      margin-bottom: 4px;
+    }
+    .job p { margin: 0; }
+    .edu-row, .lang-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fabián Marín</h1>
+  <p class="title">Senior Software Engineer</p>
+  <p class="contact">
+    +57 301 644 2107 · famarin1k86@gmail.com · Medellín, Colombia ·
+    <a href="https://famarin.dev">famarin.dev</a>
+  </p>
+
+  <h2>Profile</h2>
+  <p class="profile">
+    Senior full-stack engineer with 19+ years building web and mobile products.
+    Strong focus on React Native with a CLI-first workflow (Expo when the project needs it),
+    plus Redux Toolkit, Zustand, and TanStack Query for client state and server data.
+    Also ships React, Next.js, and Node.js systems with solid testing and delivery habits.
+  </p>
+
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li><strong>Mobile</strong> React Native CLI, Expo, Redux Toolkit, Zustand, TanStack Query, TypeScript</li>
+    <li><strong>Frontend</strong> React, Next.js, TypeScript, JavaScript</li>
+    <li><strong>Backend</strong> Node.js, Express.js, GraphQL, REST</li>
+    <li><strong>Data</strong> PostgreSQL, MySQL, MongoDB, SQL Server, Sequelize</li>
+    <li><strong>Testing</strong> Jest, React Testing Library, Playwright, Cypress, K6</li>
+    <li><strong>DevOps</strong> Docker, GitHub Actions, Heroku, Amazon S3, CI/CD</li>
+    <li><strong>AI</strong> Claude, MCP, AI pair programming, prompt engineering</li>
+  </ul>
+
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-head">
+      <span>Senior Software Engineer</span>
+      <span>Jul 2024 – Present</span>
+    </div>
+    <div class="job-meta">
+      <span>NEORIS · The Home Depot</span>
+    </div>
+    <p>
+      Fullstack development with React and Node.js across internal applications.
+      Unit tests with Jest and React Testing Library, data fetching with TanStack Query,
+      and performance testing with K6. Scrum delivery of continuous improvements.
+    </p>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span>Senior Software Engineer</span>
+      <span>Nov 2019 – May 2024</span>
+    </div>
+    <div class="job-meta">
+      <span>Growth Acceleration Partners</span>
+    </div>
+    <p>
+      Led migration from Ember.js to React and React Native (CLI-first, Expo when it fit).
+      Built a scholarship platform on Next.js. State with Redux Toolkit, Zustand, and Context.
+      Data fetching with TanStack Query. Webpack optimization, GitHub Actions CI/CD,
+      Node.js backend with Sequelize/PostgreSQL. Led the Node Center of Excellence.
+      Technical interviewing and mentorship.
+    </p>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span>Technical Lead</span>
+      <span>Apr 2016 – Nov 2019</span>
+    </div>
+    <div class="job-meta">
+      <span>Fénix Cloud</span>
+    </div>
+    <p>
+      Defined architectures for Warehouse Management Systems using AngularJS and PHP Laravel/MySQL.
+      Requirements, documentation, and cross-team guidance through delivery.
+    </p>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span>Senior Developer</span>
+      <span>Jul 2015 – Apr 2016</span>
+    </div>
+    <div class="job-meta">
+      <span>Cognox</span>
+    </div>
+    <p>
+      Consolidated operations and branding across Línea Directa brands. Modernized a legacy VB
+      application to consume REST services and share reusable integration components.
+    </p>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span>Senior Developer</span>
+      <span>Aug 2011 – Jul 2014</span>
+    </div>
+    <div class="job-meta">
+      <span>It-Matica</span>
+    </div>
+    <p>
+      .NET work on PumpStar (Miami) for debit gas purchases, plus secure WCF web services
+      with Viamericas for cross-platform interoperability.
+    </p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h2>Education</h2>
+      <div class="edu-row"><span><strong>CESDE</strong> — Software Developer</span><span>2009 – 2011</span></div>
+      <div class="edu-row"><span><strong>ITM</strong> — Systems of Information</span><span>2004 – 2007</span></div>
+    </div>
+    <div>
+      <h2>Languages</h2>
+      <div class="lang-row"><span>Spanish</span><span>Native</span></div>
+      <div class="lang-row"><span>English</span><span>Advanced</span></div>
+    </div>
+  </div>
+</body>
+</html>

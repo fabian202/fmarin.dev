@@ -2,7 +2,7 @@
   "available": "ESTADO: EN LINEA",
   "brand": "FAMARIN.DEV",
   "headline": "Ingeniero de software. 19 años en producción.",
-  "bio": "Sistemas fullstack, estándares Node, migraciones y pruebas que aguantan el release. Desde Medellín.",
+  "bio": "Fullstack y React Native (CLI primero). Redux Toolkit, Zustand, TanStack Query. Estándares Node, migraciones y pruebas que aguantan el release. Desde Medellín.",
   "cta": "PULSA START",
   "viewWork": "VER EQUIPO",
   "resume": "DESCARGAR SAVE",
@@ -27,5 +27,5 @@
   "advanced": "AVANZADO",
   "unlocked": "DESBLOQUEADO",
   "metaTitle": "FAMARIN.DEV — Ingeniero de Software",
-  "metaDescription": "Ingeniero de software en Medellín. Sistemas fullstack, estándares Node, migraciones y pruebas listas para producción. 19 años en el campo."
+  "metaDescription": "Ingeniero de software en Medellín. React Native CLI, Expo, Redux Toolkit, Zustand, TanStack Query, más sistemas fullstack en Node. 19 años en el campo."
 }

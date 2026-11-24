@@ -2,7 +2,7 @@
   "available": "STATUS: ONLINE",
   "brand": "FAMARIN.DEV",
   "headline": "Software engineer. 19 years in production.",
-  "bio": "Full-stack systems, Node standards, migrations, and tests that survive release day. Based in Medellín.",
+  "bio": "Full-stack and React Native (CLI-first). Redux Toolkit, Zustand, TanStack Query. Node standards, migrations, and tests that survive release day. Based in Medellín.",
   "cta": "PRESS START",
   "viewWork": "VIEW LOADOUT",
   "resume": "DOWNLOAD SAVE",
@@ -27,5 +27,5 @@
   "advanced": "ADVANCED",
   "unlocked": "UNLOCKED",
   "metaTitle": "FAMARIN.DEV — Software Engineer",
-  "metaDescription": "Software engineer in Medellín. Full-stack systems, Node standards, migrations, and production-ready tests. 19 years in the field."
+  "metaDescription": "Software engineer in Medellín. React Native CLI, Expo, Redux Toolkit, Zustand, TanStack Query, plus full-stack Node systems. 19 years in the field."
 }

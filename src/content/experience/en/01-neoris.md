@@ -6,4 +6,4 @@ endDate: null
 order: 1
 ---
 
-Fullstack development with React and Node.js across multiple internal applications. Unit testing with Jest and React Testing Library, data fetching with React Query, and performance testing with K6. Working in Scrum methodology delivering continuous improvements.
+Fullstack development with React and Node.js across multiple internal applications. Unit testing with Jest and React Testing Library, data fetching with TanStack Query, and performance testing with K6. Working in Scrum methodology delivering continuous improvements.
